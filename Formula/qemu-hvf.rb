@@ -32,14 +32,9 @@ class QemuHvf < Formula
     sha256 "7007f7f71d0131d9475091abec36b9b9bc5307ccdb81b9040f3e5ae967709dd7"
   end
 
-  patch do
-    url "https://lore.kernel.org/qemu-devel/CA+pCdY09+OQfXq3YmRNuQE59ACOq7Py2q4hqOwgq4PnepCXhTA@mail.gmail.com/raw"
-    sha256 "cb494e53238f3b3f93665504ef045a9042a64e8a6f6326fd40042051b7e752bd"
-  end
-
   def install
     chdir "slirp" do
-      system "git", "checkout", "master"
+      system "git", "checkout", "v4.5.0"
     end
     mkdir "build" do
       system "../configure",
