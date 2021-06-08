@@ -27,11 +27,6 @@ class QemuHvf < Formula
 
   patch :DATA
 
-  patch do
-    url "https://lore.kernel.org/qemu-devel/CA+pCdY3iG+pKKQqEVknnWF-W0wK36S4U1jxPvxmGAPp6FFvz1Q@mail.gmail.com/raw"
-    sha256 "7007f7f71d0131d9475091abec36b9b9bc5307ccdb81b9040f3e5ae967709dd7"
-  end
-
   def install
     chdir "slirp" do
       system "git", "checkout", "v4.5.0"
