@@ -29,7 +29,7 @@ class QemuHvf < Formula
 
   def install
     chdir "slirp" do
-      system "git", "checkout", "v4.5.0"
+      system "git", "checkout", "v4.6.1"
     end
     mkdir "build" do
       system "../configure",
